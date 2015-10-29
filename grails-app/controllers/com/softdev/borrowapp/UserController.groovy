@@ -101,4 +101,15 @@ class UserController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
+    @Transactional
+    def addUser(){
+
+    }
+
+    def saveUser(String username, String userNo, String tel){
+        def user = new User(name:username, userNo:userNo, tel:tel)
+        user.save()
+        redirect(action:"addUser")
+    }
 }
