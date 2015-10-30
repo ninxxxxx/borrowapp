@@ -103,8 +103,17 @@ class UserController {
     }
 
     @Transactional
-    def addUser(){
 
+    def userMain(){//
+        // : show user's list
+    }
+
+    def userDetails(){//
+        //from userMain : show user details
+    }
+
+    def addUser(){//
+        //from usermain : add user
     }
 
     def saveUser(String username, String userNo, String tel){
@@ -112,4 +121,17 @@ class UserController {
         user.save()
         redirect(action:"addUser")
     }
+
+    def deleteUser(int userId){
+        //action : delete
+    }
+
+    def editUser(){//
+        //from userdetails : edit user's details & delete user
+    }
+
+    def updateUser(){
+        //action : update user's details
+    }
+
 }
