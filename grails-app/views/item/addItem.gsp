@@ -15,7 +15,7 @@
 </div>
 
 </head>
-<body>
+<body controller="Item">
 <div class="container">
 
 
@@ -84,28 +84,28 @@
   <div class="form-group">
     <label for="inputitemid" class="col-sm-4 control-label">รหัสอุปกรณ์</label>
     <div class="col-sm-7">
-      <input type="itemid" class="form-control" id="inputitemid" placeholder="">
+      <g:textArea name="itemID" class="form-control" id="inputitemid" placeholder=""/>
     </div>
   </div>
 
     <div class="form-group">
     <label for="inputitemname" class="col-sm-4 control-label">ชื่ออุปกรณ์</label>
     <div class="col-sm-7">
-      <input type="itemname" class="form-control" id="inputitemname" placeholder="">
+      <g:textArea name="itemNAME" class="form-control" id="inputitemname" placeholder=""/>
     </div>
   </div>
 
   <div class="form-group">
     <label for="inputamount" class="col-sm-4 control-label">จำนวน</label>
     <div class="col-sm-7">
-      <input type="amount" class="form-control" id="inputamount" placeholder="">
+      <g:textArea name="amount" class="form-control" id="inputamount" placeholder=""/>
     </div>
   </div>
   
   <div class="form-group">
     <label for="inputleast" class="col-sm-4 control-label">ขั้นต่ำ</label>
     <div class="col-sm-7">
-      <input type="least" class="form-control" id="inputleast" placeholder="">
+      <g:textArea name="least" class="form-control" id="inputleast" placeholder=""/>
     </div>
   </div>
 
