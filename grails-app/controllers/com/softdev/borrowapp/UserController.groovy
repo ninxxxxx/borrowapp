@@ -120,7 +120,7 @@ class UserController {
     }
 
     def saveUser(String username, String password, String tel){
-        def user = new User(name:username, userNo:password, tel:tel)
+        def user = new User(name:username, userNo:userNo, tel:tel)
         user.save()
         redirect(action:"addUser")
 
@@ -146,7 +146,7 @@ class UserController {
         user.tel = params.tel
         user.passcode = params.passcode
         user.save()
-        redirect(action:"userDetails", params : [userId:user.id])
+        redirect(action:"userDetails", params:[userId: user.id])
     }
 
     
