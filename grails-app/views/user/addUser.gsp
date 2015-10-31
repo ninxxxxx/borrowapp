@@ -82,40 +82,54 @@
     <g:form class="form-horizontal">
 
   <div class="form-group">
-    <label for="inputitemid" class="col-sm-4 control-label">User name</label>
+   
     <div class="col-sm-7">
-      <input name="username" type="itemid" class="form-control" id="inputitemid" placeholder="">
+      User name : <g:textArea name="username"  class="form-control" id="inputitemid" rows="1" placeholder=""/>
     </div>
   </div>
-
+<br>
     <div class="form-group">
-    <label for="inputitemname" class="col-sm-4 control-label">UserNo</label>
+     
     <div class="col-sm-7">
-      <input name="userNo" type="itemname" class="form-control" id="inputitemname" placeholder="">
+      password :<g:textArea name="password"  class="form-control" id="inputitemname" rows="1" placeholder=""/>
     </div>
   </div>
-
+<br>
   <div class="form-group">
-    <label for="inputamount" class="col-sm-4 control-label">Tel.</label>
+    
     <div class="col-sm-7">
-      <input name="tel" type="amount" class="form-control" id="inputamount" placeholder="">
+      firstName :<g:textArea name="firstName"  class="form-control" id="inputamount" rows="1" placeholder=""/>
+
     </div>
   </div>
-  
   <div class="form-group">
-    <label for="inputleast" class="col-sm-4 control-label">ขั้นต่ำ</label>
+    
     <div class="col-sm-7">
-      <input type="least" class="form-control" id="inputleast" placeholder="">
+      lastName :<g:textArea name="lastName"  class="form-control" id="inputamount" rows="1" placeholder=""/>
+
     </div>
   </div>
+<div class="form-group">
+    
+    <div class="col-sm-7">
+      Tel. :<g:textArea name="tel"  class="form-control" id="inputamount" rows="1" placeholder=""/>
 
-  
+    </div>
+  </div>
+<div class="form-group">
+    
+    <div class="col-sm-7">
+      passcode :<g:textArea name="passcode"  class="form-control" id="inputamount" rows="1" placeholder=""/>
+
+    </div>
+  </div>  
 
   </div>
   <div class="form-group">
-    <div class="col-sm-offset-5 col-sm-10">
-      <br>
-      <g:actionSubmit value="Submit" action="saveUser" class="btn btn-primary"/>
+    <div class="col-sm-offset-5 col-sm-3">
+
+      <center><g:actionSubmit value="Submit" action="saveUser" class="btn btn-primary"/><center>
+      
     </div>
 
   </div> </div>
@@ -123,7 +137,6 @@
 
   <div class="col-xs-6 col-md-4"></div>
 </div>
-
 
 </div>
 </g:form>
