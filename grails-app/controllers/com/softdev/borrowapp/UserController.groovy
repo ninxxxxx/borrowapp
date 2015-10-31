@@ -119,14 +119,17 @@ class UserController {
         //from usermain : add user
     }
 
-    def saveUser(String username, String password, String tel){
-        def user = new User(name:username, userNo:userNo, tel:tel)
+    def saveUser(){
+        def user = new User(firstName:params.firstName, lastName:params.lasteName, username:params.username, password:params.password, passcode:params.passcode, tel:params.tel)
         user.save()
         redirect(action:"addUser")
     }
 
-    def deleteUser(int userId){
+    def deleteUser(){
         //action : delete
+        def user = User.get(params.userId)
+        question.delete()
+        redirect(action:'userMain')
     }
 
     def editUser(){//
