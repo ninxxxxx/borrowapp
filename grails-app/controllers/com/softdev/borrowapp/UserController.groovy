@@ -106,6 +106,8 @@ class UserController {
 
     def userMain(){//
         // : show user's list
+        [users: User.list(params)]
+
     }
 
     def userDetails(){//
@@ -116,7 +118,7 @@ class UserController {
         //from usermain : add user
     }
 
-    def saveUser(String username, String userNo, String tel){
+    def saveUser(String username, String password, String tel){
         def user = new User(name:username, userNo:userNo, tel:tel)
         user.save()
         redirect(action:"addUser")
@@ -126,7 +128,7 @@ class UserController {
         //action : delete
     }
 
-    def editUser(){//
+    def editUser(int userId){//
         //from userdetails : edit user's details & delete user
     }
 
