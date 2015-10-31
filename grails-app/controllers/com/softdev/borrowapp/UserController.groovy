@@ -112,6 +112,7 @@ class UserController {
 
     def userDetails(){//
         //from userMain : show user details
+        [user: User.get(params.userId)]
     }
 
     def addUser(){//
@@ -128,12 +129,23 @@ class UserController {
         //action : delete
     }
 
-    def editUser(int userId){//
+    def editUser(){//
         //from userdetails : edit user's details & delete user
+        [user: User.get(params.userId)]
     }
 
+    @Transactional
     def updateUser(){
         //action : update user's details
+        def user = User.get(params.userId)
+        user.username = params.username
+        user.password = params.password
+        user.firstName = params.firstName
+        user.lastName = params.lastName
+        user.tel = params.tel
+        user.passcode = params.passcode
+        user.save()
+        redirect(action:"userDetails", params[userId: user.id])
     }
 
     
