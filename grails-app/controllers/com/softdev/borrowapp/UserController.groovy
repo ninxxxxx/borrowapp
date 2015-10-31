@@ -145,7 +145,7 @@ class UserController {
         user.tel = params.tel
         user.passcode = params.passcode
         user.save()
-        redirect(action:"userDetails", params[userId: user.id])
+        redirect(action:"userDetails", params:[userId: user.id])
     }
 
     
