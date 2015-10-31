@@ -119,10 +119,12 @@ class UserController {
         //from usermain : add user
     }
 
+
     def saveUser(){
         def user = new User(firstName:params.firstName, lastName:params.lasteName, username:params.username, password:params.password, passcode:params.passcode, tel:params.tel)
         user.save()
         redirect(action:"addUser")
+
     }
 
     def deleteUser(){
@@ -148,7 +150,7 @@ class UserController {
         user.tel = params.tel
         user.passcode = params.passcode
         user.save()
-        redirect(action:"userDetails", params:[userId: user.id])
+        redirect(action:"userDetails", params : [userId:user.id])
     }
 
     
