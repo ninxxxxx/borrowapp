@@ -2,17 +2,21 @@
 <head>
   <meta charset = "utf-8" />
   <title></title>
-    <asset:stylesheet src="application.css"/>
-    <asset:javascript src="application.js"/>
+  <script type="text/javascript"src = "bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src = "bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" >
 
-</div>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+
+
 
 </head>
 <body controller="User">
   <div class="container">
 
 
-    <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -47,7 +51,7 @@
             <li><a href="history.html">ประวัติ</a></li>
           </ul>
 
-
+          
 
           <form class="navbar-form navbar-right" role="search">
             <div class="form-group">
@@ -67,7 +71,7 @@
 
     <div class="row">
      <div class="col-xs-5 "></div>
-     <div class="col-xs-5 col-md-6"><h1>เพิ่มสมาชิก</h1></div>
+     <div class="col-xs-5 col-md-6"><h1>รายละเอียดสมาชิก</h1></div>
      <div class="col-xs-5 "></div>  
    </div>
 
@@ -79,75 +83,62 @@
     <div class="col-xs-6 col-md-4"></div>
     <div class="col-xs-6 col-md-4">
 
-      <g:form class="form-horizontal">
+      <form class="form-horizontal">
 
-        <div class="form-group">
-          <label for="inputitemid" class="col-sm-5 control-label">ชื่อผู้ใช้ (user name)</label>
-          <div class="col-sm-7">
-            <g:textArea name="username" class="form-control" id="inputitemid" placeholder=""/>
-          </div>
-        </div>
+       <div class="form-group">
+        <label for="inputitemid" class="col-sm-8 control-label">ชื่อผู้ใช้ (user name) :       
+                <g:each in="${users}"> ${User.username}</g:each></label>
+       </div>
 
-        <div class="form-group">
-          <label for="inputamount" class="col-sm-5 control-label">รหัสผ่าน (password)</label>
-          <div class="col-sm-7">
-            <g:textArea name="password" class="form-control" id="inputamount" placeholder=""/>
-          </div>
-        </div>
+      <div class="form-group">
+        <label for="inputamount" class="col-sm-8 control-label">รหัสผ่าน (password) :  
+                <g:each in="${users}"> ${User.password}</g:each></label>
+      </div>
 
-        <div class="form-group">
-          <label for="inputleast" class="col-sm-5 control-label">ชื่อ</label>
-          <div class="col-sm-7">
-            <g:textArea name="firstName"  class="form-control" id="inputleast" placeholder=""/>
-          </div>
-        </div>
+      <div class="form-group">
+        <label for="inputleast" class="col-sm-8 control-label">ชื่อ :  
+                <g:each in="${users}"> ${User.firstName}</g:each></label>
+      </div>
 
-        <div class="form-group">
-          <label for="inputleast" class="col-sm-5 control-label">สกุล</label>
-          <div class="col-sm-7">
-            <g:textArea name="lastName"  class="form-control" id="inputleast" placeholder=""/>
-          </div>
-        </div>
+      <div class="form-group">
+        <label for="inputleast" class="col-sm-8 control-label">สกุล :  
+                 <g:each in="${users}"> ${User.lastName}</g:each></label>
+      </div>
 
-        <div class="form-group">
-          <label for="inputleast" class="col-sm-5 control-label">เบอ์โทรศัทพ์</label>
-          <div class="col-sm-7">
-            <g:textArea name="tel" class="form-control" id="inputleast" placeholder=""/>
-          </div>
-        </div>
+      <div class="form-group">
+        <label for="inputleast" class="col-sm-8 control-label">เบอ์โทรศัทพ์ :  
+                 <g:each in="${users}"> ${User.tel}</g:each></label>
+      </div>
 
-        <div class="form-group">
-          <label for="inputleast" class="col-sm-5 control-label">รหัสบัตร (passcode)</label>
-          <div class="col-sm-7">
-            <g:textArea name="passcode" class="form-control" id="inputleast" placeholder=""/>
-          </div>
-        </div>
+      <div class="form-group">
+        <label for="inputleast" class="col-sm-8 control-label">รหัสบัตร (passcode) :  
+                 <g:each in="${users}"> ${User.passcode}</g:each></label>
+      </div>
 
-        <div class="form-group">
-          <label for="inputleast" class="col-sm-5 control-label">รหัส RFID</label>
-          <div class="col-sm-7">
-            <g:textArea name="rfidcode" class="form-control" id="inputleast" placeholder=""/>
-          </div>
-        </div>
-
+      <div class="form-group">
+        <label for="inputleast" class="col-sm-8 control-label">รหัส RFID :   
+                <g:each in="${users}"> ${User.rfidcode}</g:each></label>
 
       </div>
-      <div class="form-group">
-        <div class="col-sm-offset-6 col-sm-6">
-          <br>
-          <g:actionSubmit value="เพิ่ม" action="saveUser" class="btn btn-default"/>
-        </div>
-
-      </div> </div>
 
 
-      <div class="col-xs-6 col-md-4"></div>
     </div>
+    <div class="form-group">
+      <div class="col-sm-offset-6 col-sm-6">
+        <br>
+        <g:actionSubmit value="edit" action="editUser" class="btn btn-default"/> <button type="submit" class="btn btn-default">ย้อนกลับ</button>  
+      </div>
+
+    </div> </div>
 
 
+    <div class="col-xs-6 col-md-4"></div>
   </div>
 
-</g:form>
+
+</div>
+
+
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
