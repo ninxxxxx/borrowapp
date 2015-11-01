@@ -126,7 +126,7 @@
         <div class="form-group">
           <label for="inputleast" class="col-sm-5 control-label">รหัส RFID</label>
           <div class="col-sm-7">
-            <input type="text" name="rfldCode" class="form-control">
+            <input type="text" name="rfidCode" class="form-control">
           </div>
         </div>
 
