@@ -2,16 +2,9 @@
 <head>
   <meta charset = "utf-8" />
   <title></title>
-  <script type="text/javascript"scr = "bower_components/jquery/dist/jquery.js"></script>
-<script type="text/javascript" scr = "bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" >
+    <asset:stylesheet src="application.css"/>
+    <asset:javascript src="application.js"/>
 
-<link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="main.css" rel="stylesheet">
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
 </div>
 
 </head>
