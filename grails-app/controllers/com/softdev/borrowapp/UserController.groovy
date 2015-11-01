@@ -102,8 +102,6 @@ class UserController {
         }
     }
 
-    @Transactional
-
     def userMain(){//
         // : show user's list
         [users: User.list(params)]
@@ -119,15 +117,20 @@ class UserController {
         //from usermain : add user
     }
 
-    def saveUser(String username, String password, String tel){
-        def user = new User(name:username, userNo:userNo, tel:tel)
-        user.save()
-        redirect(action:"addUser")
-
+    @Transactional
+    def saveUser(String firstName, String lastName, String username, String password, String tel, String passcode, String rfidCode){
+        // print params.firstName
+        def u = new User(username:username, password:password, firstName:firstName, lastName:lastName, tel:tel, passcode:passcode, rfidCode:rfidCode)
+        u.save()
+        // print u.id
+        // redirect(action:"userDetails", params:[userId:u.id])
     }
 
-    def deleteUser(int userId){
+    def deleteUser(){
         //action : delete
+        def user = User.get(params.userId)
+        question.delete()
+        redirect(action:'userMain')
     }
 
     def editUser(){//
@@ -139,6 +142,7 @@ class UserController {
     def updateUser(){
         //action : update user's details
         def user = User.get(params.userId)
+        print params.username
         user.username = params.username
         user.password = params.password
         user.firstName = params.firstName

@@ -86,38 +86,39 @@
       <form class="form-horizontal">
 
        <div class="form-group">
-        <label for="inputitemid" class="col-sm-8 control-label">ชื่อผู้ใช้ (user name) :       
-                <g:each in="${users}"> ${User.username}</g:each></label>
+        <g:hiddenField name="userId" value="${user.id}" />
+        <label for="inputitemid" class="col-sm-8 control-label">ชื่อผู้ใช้ (user name) :${user.username}       
+                <g:each in="${users}"> ${user.username}</g:each></label>
        </div>
 
       <div class="form-group">
-        <label for="inputamount" class="col-sm-8 control-label">รหัสผ่าน (password) :  
-                <g:each in="${users}"> ${User.password}</g:each></label>
+        <label for="inputamount" class="col-sm-8 control-label">รหัสผ่าน (password) :  ${user.password}
+                <g:each in="${users}"> ${user.password}</g:each></label>
       </div>
 
       <div class="form-group">
-        <label for="inputleast" class="col-sm-8 control-label">ชื่อ :  
-                <g:each in="${users}"> ${User.firstName}</g:each></label>
+        <label for="inputleast" class="col-sm-8 control-label">ชื่อ :  ${user.firstName}
+                <g:each in="${users}"> ${user.firstName}</g:each></label>
       </div>
 
       <div class="form-group">
-        <label for="inputleast" class="col-sm-8 control-label">สกุล :  
-                 <g:each in="${users}"> ${User.lastName}</g:each></label>
+        <label for="inputleast" class="col-sm-8 control-label">สกุล :  ${user.lastName}
+                 <g:each in="${users}"> ${user.lastName}</g:each></label>
       </div>
 
       <div class="form-group">
-        <label for="inputleast" class="col-sm-8 control-label">เบอ์โทรศัทพ์ :  
-                 <g:each in="${users}"> ${User.tel}</g:each></label>
+        <label for="inputleast" class="col-sm-8 control-label">เบอ์โทรศัทพ์ :  ${user.tel}
+                 <g:each in="${users}"> ${user.tel}</g:each></label>
       </div>
 
       <div class="form-group">
-        <label for="inputleast" class="col-sm-8 control-label">รหัสบัตร (passcode) :  
-                 <g:each in="${users}"> ${User.passcode}</g:each></label>
+        <label for="inputleast" class="col-sm-8 control-label">รหัสบัตร (passcode) :  ${user.passcode}
+                 <g:each in="${users}"> ${user.passcode}</g:each></label>
       </div>
 
       <div class="form-group">
-        <label for="inputleast" class="col-sm-8 control-label">รหัส RFID :   
-                <g:each in="${users}"> ${User.rfidcode}</g:each></label>
+        <label for="inputleast" class="col-sm-8 control-label">รหัส RFID :   ${user.rfidCode}
+                <g:each in="${users}"> ${user.rfidcode}</g:each></label>
 
       </div>
 

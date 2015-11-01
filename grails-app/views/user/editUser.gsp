@@ -82,44 +82,44 @@
 <g:form class="form-horizontal">
 
   <div class="form-group">
-   
+    <g:hiddenField name="userId" value="${user.id}" />
     <div class="col-sm-7">
-      User name : <g:textArea name="username"  class="form-control" id="inputitemid" rows="1" placeholder=""/>
+      User name : <g:textArea value="${user.username}" name="username"  class="form-control" id="inputitemid" rows="1" placeholder=""/>
     </div>
   </div>
 <br>
     <div class="form-group">
      
     <div class="col-sm-7">
-      password :<g:textArea name="password"  class="form-control" id="inputitemname" rows="1" placeholder=""/>
+      password :<g:textArea value="${user.password}" name="password"  class="form-control" id="inputitemname" rows="1" placeholder=""/>
     </div>
   </div>
 <br>
   <div class="form-group">
     
     <div class="col-sm-7">
-      firstName :<g:textArea name="firstName"  class="form-control" id="inputamount" rows="1" placeholder=""/>
+      firstName :<g:textArea value="${user.firstName}" name="firstName"  class="form-control" id="inputamount" rows="1" placeholder=""/>
 
     </div>
   </div>
   <div class="form-group">
     
     <div class="col-sm-7">
-      lastName :<g:textArea name="lastName"  class="form-control" id="inputamount" rows="1" placeholder=""/>
+      lastName :<g:textArea value="${user.lastName}" name="lastName"  class="form-control" id="inputamount" rows="1" placeholder=""/>
 
     </div>
   </div>
 <div class="form-group">
     
     <div class="col-sm-7">
-      Tel. :<g:textArea name="tel"  class="form-control" id="inputamount" rows="1" placeholder=""/>
+      Tel. :<g:textArea value="${user.tel}" name="tel"  class="form-control" id="inputamount" rows="1" placeholder=""/>
 
     </div>
   </div>
 <div class="form-group">
     
     <div class="col-sm-7">
-      passcode :<g:textArea name="passcode"  class="form-control" id="inputamount" rows="1" placeholder=""/>
+      passcode :<g:textArea value="${user.passcode}"  name="passcode"  class="form-control" id="inputamount" rows="1" placeholder=""/>
 
     </div>
   </div>  
