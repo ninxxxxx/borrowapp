@@ -69,61 +69,59 @@
    </div>
 
    <br>
-
-
-
    <div class="row">
     <div class="col-xs-6 col-md-4"></div>
     <div class="col-xs-6 col-md-4">
 
       <form class="form-horizontal">
-
-       <div class="form-group">
-        <g:hiddenField name="userId" value="${user.id}" />
-        <label for="inputitemid" class="col-sm-8 control-label">ชื่อผู้ใช้ (user name) :${user.username}       
-                <g:each in="${users}"> ${user.username}</g:each></label>
-       </div>
-
-      <div class="form-group">
-        <label for="inputamount" class="col-sm-8 control-label">รหัสผ่าน (password) :  ${user.password}
-                <g:each in="${users}"> ${user.password}</g:each></label>
-      </div>
-
-      <div class="form-group">
-        <label for="inputleast" class="col-sm-8 control-label">ชื่อ :  ${user.firstName}
-                <g:each in="${users}"> ${user.firstName}</g:each></label>
-      </div>
-
-      <div class="form-group">
-        <label for="inputleast" class="col-sm-8 control-label">สกุล :  ${user.lastName}
-                 <g:each in="${users}"> ${user.lastName}</g:each></label>
-      </div>
-
-      <div class="form-group">
-        <label for="inputleast" class="col-sm-8 control-label">เบอ์โทรศัทพ์ :  ${user.tel}
-                 <g:each in="${users}"> ${user.tel}</g:each></label>
-      </div>
-
-      <div class="form-group">
-        <label for="inputleast" class="col-sm-8 control-label">รหัสบัตร (passcode) :  ${user.passcode}
-                 <g:each in="${users}"> ${user.passcode}</g:each></label>
-      </div>
-
-      <div class="form-group">
-        <label for="inputleast" class="col-sm-8 control-label">รหัส RFID :   ${user.rfidCode}
-                <g:each in="${users}"> ${user.rfidcode}</g:each></label>
+        <g:hiddenField name="userId" value="${user.id}"/>
+   
+      
 
       </div>
-
-
+      
     </div>
-    <div class="form-group">
-      <div class="col-sm-offset-6 col-sm-6">
-        <br>
-        <g:actionSubmit value="edit" action="editUser" class="btn btn-default"/> <button type="submit" class="btn btn-default">ย้อนกลับ</button>  
-      </div>
+    </div>
 
-    </div> </div>
+
+
+<table id="itemTable"  align="center" style="width:50%" class="table table-striped">
+    
+      <tbody>
+           
+            <tr>
+              <td>ชื่อผู้ใช้ (user name)</td>   <td>${user.username} </td>
+            </tr>
+           
+            <tr>
+              <td>รหัสผ่าน (password) </td>   <td>${user.password} </td>
+            </tr>
+            
+            <tr>
+              <td>ชื่อ</td>                   <td>${user.firstName} </td>
+            </tr>
+
+            <tr>
+              <td>สกุล </td>   <td> ${user.lastName}</td>
+            </tr>
+
+            <tr>
+              <td>เบอ์โทรศัทพ์</td>   <td>${user.tel}</td>
+            </tr>
+
+            <tr>
+              <td>รหัสบัตร (passcode) </td>   <td>${user.passcode}</td>
+            </tr>
+            <tr>
+              <td>รหัส RFID</td>   <td> ${user.rfidCode} </td>
+            </tr>
+            <tr>
+              <td><g:link action="editUser" params="[userId:"${user.id}"]">EDIT</g:link></td>
+            </tr>
+      </tbody>
+      </table>
+
+<button type="submit" class="btn btn-default">ลบ</button> <button type="submit" class="btn btn-default">ย้อนกลับ</button>  
 
 
     <div class="col-xs-6 col-md-4"></div>

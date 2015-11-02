@@ -12,26 +12,26 @@
 <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="http://www.coe.psu.ac.th/">COE</a>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="admin.html">Home <span class="sr-only">(current)</span></a></li>
-              <li><a href="#">การแจ้งเตือน</a></li>
-              <li><a href="check.html">เช็คจำนวนอุปกรณ์</a></li>
-              <li><a href="add.html">เพิ่ม-ลบอุปกรณ์</a></li>
-              <li><a href="history.html">ประวัติ</a></li>
-
-            </ul>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="admin.html">Home <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">การแจ้งเตือน</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">อุปกรณ์ <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="add.html">เพิ่ม-ลบ อุปกรณ์</a></li>
+                <li><a href="check.html">รายละเอียดอุปกรณ์</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">สมาชิก <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="adduser.html">เพิ่มสมาชิก</a></li>
+                <li><a href="detailuser.html">รายชื่อสมาชิก</a></li>
+              </ul>
+            </li>
+            <li><a href="history.html">ประวัติ</a></li>
+          </ul>
 
             <form class="navbar-form navbar-right" role="search">
               <div class="form-group">
@@ -72,68 +72,39 @@
 <g:form class="form-horizontal">
 
   <div class="form-group">
-    <g:hiddenField name="userId" value="${user.id}" />
+    <g:hiddenField name="userId" value="${user.id}"/>
     <div class="col-sm-7">
-<<<<<<< HEAD
-      User name : <g:textField name="username"  class="form-control" id="inputitemid" placeholder=""/>
-=======
-      User name : <g:textArea value="${user.username}" name="username"  class="form-control" id="inputitemid" rows="1" placeholder=""/>
->>>>>>> 711b9376fd8e3a9fa72f5b1f77cae4d3d32d713f
+      User name : <g:textField name="username" value="${user.id}" class="form-control" id="inputusername" placeholder=""/>
     </div>
   </div>
 <br>
     <div class="form-group">
      
     <div class="col-sm-7">
-<<<<<<< HEAD
-      password :<g:textField name="password"  class="form-control" id="inputitemname"  placeholder=""/>
-=======
-      password :<g:textArea value="${user.password}" name="password"  class="form-control" id="inputitemname" rows="1" placeholder=""/>
->>>>>>> 711b9376fd8e3a9fa72f5b1f77cae4d3d32d713f
+      password :<g:textField name="password" value="${user.id}" class="form-control" id="inputpassword" placeholder=""/>
     </div>
   </div>
 <br>
   <div class="form-group">
     
     <div class="col-sm-7">
-<<<<<<< HEAD
-      firstName :<g:textField name="firstName"  class="form-control" id="inputamount"  placeholder=""/>
-=======
-      firstName :<g:textArea value="${user.firstName}" name="firstName"  class="form-control" id="inputamount" rows="1" placeholder=""/>
->>>>>>> 711b9376fd8e3a9fa72f5b1f77cae4d3d32d713f
-
+      firstName :<g:textField name="firstName" value="${user.id}" class="form-control" id="inputfirstname"  placeholder=""/>
     </div>
   </div>
   <div class="form-group">
     
     <div class="col-sm-7">
-<<<<<<< HEAD
-      lastName :<g:textField name="lastName"  class="form-control" id="inputamount" placeholder=""/>
-=======
-      lastName :<g:textArea value="${user.lastName}" name="lastName"  class="form-control" id="inputamount" rows="1" placeholder=""/>
->>>>>>> 711b9376fd8e3a9fa72f5b1f77cae4d3d32d713f
-
+      lastName :<g:textField name="lastName" value="${user.id}" class="form-control" id="inputlastname" placeholder=""/>
     </div>
   </div>
-<div class="form-group">
-    
+<div class="form-group">    
     <div class="col-sm-7">
-<<<<<<< HEAD
-      Tel. :<g:textField name="tel"  class="form-control" id="inputamount"  placeholder=""/>
-=======
-      Tel. :<g:textArea value="${user.tel}" name="tel"  class="form-control" id="inputamount" rows="1" placeholder=""/>
->>>>>>> 711b9376fd8e3a9fa72f5b1f77cae4d3d32d713f
-
+      Tel. :<g:textField name="tel" value="${user.id}" class="form-control" id="inputtel" placeholder=""/>
     </div>
   </div>
-<div class="form-group">
-    
+<div class="form-group">   
     <div class="col-sm-7">
-<<<<<<< HEAD
-      passcode :<g:textField name="passcode"  class="form-control" id="inputamount"  placeholder=""/>
-=======
-      passcode :<g:textArea value="${user.passcode}"  name="passcode"  class="form-control" id="inputamount" rows="1" placeholder=""/>
->>>>>>> 711b9376fd8e3a9fa72f5b1f77cae4d3d32d713f
+      passcode :<g:textField name="passcode" value="${user.id}" class="form-control" id="inputpasscode" placeholder=""/>
 
     </div>
   </div>  
