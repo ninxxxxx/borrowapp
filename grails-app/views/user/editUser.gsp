@@ -84,42 +84,42 @@
   <div class="form-group">
    
     <div class="col-sm-7">
-      User name : <g:textArea name="username"  class="form-control" id="inputitemid" rows="1" placeholder=""/>
+      User name : <g:textField name="username"  class="form-control" id="inputitemid" placeholder=""/>
     </div>
   </div>
 <br>
     <div class="form-group">
      
     <div class="col-sm-7">
-      password :<g:textArea name="password"  class="form-control" id="inputitemname" rows="1" placeholder=""/>
+      password :<g:textField name="password"  class="form-control" id="inputitemname"  placeholder=""/>
     </div>
   </div>
 <br>
   <div class="form-group">
     
     <div class="col-sm-7">
-      firstName :<g:textArea name="firstName"  class="form-control" id="inputamount" rows="1" placeholder=""/>
+      firstName :<g:textField name="firstName"  class="form-control" id="inputamount"  placeholder=""/>
 
     </div>
   </div>
   <div class="form-group">
     
     <div class="col-sm-7">
-      lastName :<g:textArea name="lastName"  class="form-control" id="inputamount" rows="1" placeholder=""/>
+      lastName :<g:textField name="lastName"  class="form-control" id="inputamount" placeholder=""/>
 
     </div>
   </div>
 <div class="form-group">
     
     <div class="col-sm-7">
-      Tel. :<g:textArea name="tel"  class="form-control" id="inputamount" rows="1" placeholder=""/>
+      Tel. :<g:textField name="tel"  class="form-control" id="inputamount"  placeholder=""/>
 
     </div>
   </div>
 <div class="form-group">
     
     <div class="col-sm-7">
-      passcode :<g:textArea name="passcode"  class="form-control" id="inputamount" rows="1" placeholder=""/>
+      passcode :<g:textField name="passcode"  class="form-control" id="inputamount"  placeholder=""/>
 
     </div>
   </div>  

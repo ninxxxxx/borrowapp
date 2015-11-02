@@ -87,49 +87,50 @@
         <div class="form-group">
           <label for="inputitemid" class="col-sm-5 control-label">ชื่อผู้ใช้ (user name)</label>
           <div class="col-sm-7">
-            <g:textArea name="username" class="form-control" id="inputitemid" placeholder=""/>
+            <g:textField name="username" class="form-control" id="inputitemid" placeholder=""/>
           </div>
         </div>
 
         <div class="form-group">
           <label for="inputamount" class="col-sm-5 control-label">รหัสผ่าน (password)</label>
           <div class="col-sm-7">
-            <g:textArea name="password" class="form-control" id="inputamount" placeholder=""/>
+            <g:textField name="password" class="form-control" id="inputamount" placeholder=""/>
           </div>
         </div>
 
         <div class="form-group">
           <label for="inputleast" class="col-sm-5 control-label">ชื่อ</label>
           <div class="col-sm-7">
-            <g:textArea name="firstName"  class="form-control" id="inputleast" placeholder=""/>
+            <g:textField name="firstName"  class="form-control" id="inputleast" placeholder=""/>
           </div>
         </div>
 
         <div class="form-group">
           <label for="inputleast" class="col-sm-5 control-label">สกุล</label>
           <div class="col-sm-7">
-            <g:textArea name="lastName"  class="form-control" id="inputleast" placeholder=""/>
+            <g:textField name="lastName"  class="form-control" id="inputleast" placeholder=""/>
+
           </div>
         </div>
 
         <div class="form-group">
           <label for="inputleast" class="col-sm-5 control-label">เบอ์โทรศัทพ์</label>
           <div class="col-sm-7">
-            <g:textArea name="tel" class="form-control" id="inputleast" placeholder=""/>
+            <g:textField name="tel" class="form-control" id="inputleast" placeholder=""/>
           </div>
         </div>
 
         <div class="form-group">
           <label for="inputleast" class="col-sm-5 control-label">รหัสบัตร (passcode)</label>
           <div class="col-sm-7">
-            <g:textArea name="passcode" class="form-control" id="inputleast" placeholder=""/>
+            <g:textField name="passcode" class="form-control" id="inputleast" placeholder=""/>
           </div>
         </div>
 
         <div class="form-group">
           <label for="inputleast" class="col-sm-5 control-label">รหัส RFID</label>
           <div class="col-sm-7">
-            <g:textArea name="rfidcode" class="form-control" id="inputleast" placeholder=""/>
+            <g:textField name="rfidcode" class="form-control" id="inputleast" placeholder=""/>
           </div>
         </div>
 
