@@ -8,9 +8,11 @@
 //= require jquery.min
 //= require jquery-ui
 //= require chosen.jquery.min
-//= require bootstrap
+//= require bootstrap.min
 //= require moment.min
 //= require bootstrap-datetimepicker.min
+//= require jquery
+//= require_tree .
 //= require_self
 
 if (typeof jQuery !== 'undefined') {
