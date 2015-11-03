@@ -101,4 +101,50 @@ class ItemController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
+
+    def itemMain(){//
+        // : show user's list
+        [items: item.list(params)]
+
+    }
+
+    def addItem(){//
+        //from usermain : add user
+    }
+
+    @Transactional
+    def saveItem(){
+        // print param
+        def item = new Item(params)
+        //def u = new item(itemname:itemname, password:password, firstName:firstName, lastName:lastName, tel:tel, passcode:passcode, rfidCode:rfidCode)
+        u.save(flush: true)
+        // print u.id
+        redirect(action:"itemDetails", params:[itemId:u.id])
+    }
+
+    def deleteItem(){
+        //action : delete
+        def item = Item.get(params.itemId)
+        question.delete()
+        redirect(action:'itemMain')
+    }
+
+    def editItem(){//
+        //from itemdetails : edit item's details & delete item
+        [item: Item.get(params.itemId)]
+    }
+
+    @Transactional
+    def updateItem(){
+        //action : update item's details
+        def item = Item.get(params.itemId)
+        // print params.username
+        item.username = params.title
+        item.password = params.category
+        item.firstName = params.least
+        item.lastName = params.amount
+        item.save()
+        redirect(action:"itemDetails", params:[itemId: item.id])
+    }
 }
