@@ -126,7 +126,6 @@
     <div class="col-xs-6 col-md-4"></div>
   </div>
 
-<g:actionSubmit value="add" action="addUser" class="btn btn-default"/>
 </div>
 
 
