@@ -66,7 +66,7 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 
-	<h1 class="text-center page-header">รายละเอียดอุปกรณ์</h1>
+	<h1 class="text-center page-header">UserMain</h1>
 	
 	
 
@@ -74,7 +74,7 @@
 		<div class="form-group">
 				<label for="search" class="col-sm-4 control-label">ค้นหา</label>
 					<div class="col-sm-4">
-						<input type="text" class="form-control" placeholder="รหัส/ชื่ออุปกรณ์">
+						<input type="text" class="form-control" placeholder="ชื่อ">
 					</div>
 				<button type="submit" class="btn btn-default">search</button>
 		</div>
@@ -83,28 +83,27 @@
 	</form>
 
 	
-
    		<table id="itemTable"  align="center" style="width:50%" class="table table-striped">
 	    	<thead>
 			      <tr>
-				      <th>รหัส</th>
+				      <th>ลำดับที่</th>
 				      <th>ชื่อ</th>
-				      <th>จำนวน</th>
 			      </tr>
 			</thead>
 			<tbody>
+            <g:each var="user" in="${users}">
 			      <tr>
-			        <td>001</td>
-			        <td>ปากกา</td>
-			        <td>100</td>
+			        <td>${user.id}</td>
+
+			        <td><g:link action="userDetails" params="[userId:"${user.id}"]">${user.firstName}</g:link></td>
 			      </tr>
-			      <tr>
-			        <td>002</td>
-			        <td>ยางลบ</td>
-			        <td>18</td>
-			      </tr>
+            </g:each>
+      
+			   
+
 			</tbody>
 			</table>
+
 
 	</div>
 
