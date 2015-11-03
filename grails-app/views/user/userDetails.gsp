@@ -90,38 +90,39 @@
       <tbody>
            
             <tr>
-              <td>ชื่อผู้ใช้ (user name)</td>   <td>${user.username} </td>
+              <th>ชื่อผู้ใช้ (user name)</th>   <td>${user.username} </td>
             </tr>
            
             <tr>
-              <td>รหัสผ่าน (password) </td>   <td>${user.password} </td>
+              <th>รหัสผ่าน (password) </th>   <td>${user.password} </td>
             </tr>
             
             <tr>
-              <td>ชื่อ</td>                   <td>${user.firstName} </td>
+              <th>ชื่อ</th><td>${user.firstName} </td>
             </tr>
 
             <tr>
-              <td>สกุล </td>   <td> ${user.lastName}</td>
+              <th>สกุล </th>   <td> ${user.lastName}</td>
             </tr>
 
             <tr>
-              <td>เบอ์โทรศัทพ์</td>   <td>${user.tel}</td>
+              <th>เบอ์โทรศัทพ์</th>   <td>${user.tel}</td>
             </tr>
 
             <tr>
-              <td>รหัสบัตร (passcode) </td>   <td>${user.passcode}</td>
+              <th>รหัสบัตร (passcode) </th>   <td>${user.passcode}</td>
             </tr>
             <tr>
-              <td>รหัส RFID</td>   <td> ${user.rfidCode} </td>
+              <th>รหัส RFID</th>   <td> ${user.rfidCode} </td>
             </tr>
             <tr>
-              <td><g:link action="editUser" params="[userId:"${user.id}"]">EDIT</g:link></td>
+              <td><g:actionSubmit value="EDIT" action="editUser" params="[userId:"${user.id}"]" class="btn btn-default"/> <button type="submit" class="btn btn-default">ลบ</button> <button type="submit" class="btn btn-default">ย้อนกลับ</button>  </td>
             </tr>
+
       </tbody>
       </table>
 
-<button type="submit" class="btn btn-default">ลบ</button> <button type="submit" class="btn btn-default">ย้อนกลับ</button>  
+
 
 
     <div class="col-xs-6 col-md-4"></div>

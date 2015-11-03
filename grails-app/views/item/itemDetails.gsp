@@ -2,17 +2,14 @@
 <head>
   <meta charset = "utf-8" />
   <title></title>
-    <asset:stylesheet src="application.css"/>
+<asset:stylesheet src="application.css"/>
     <asset:javascript src="application.js"/>
-
-</div>
-
 </head>
 <body controller="Item">
   <div class="container">
 
 
-    <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -47,7 +44,7 @@
             <li><a href="history.html">ประวัติ</a></li>
           </ul>
 
-
+          
 
           <form class="navbar-form navbar-right" role="search">
             <div class="form-group">
@@ -67,68 +64,66 @@
 
     <div class="row">
      <div class="col-xs-5 "></div>
-     <div class="col-xs-5 col-md-6"><h1>เพิ่มสมาชิก</h1></div>
+     <div class="col-xs-5 col-md-6"><h1>รายละเอียดสมาชิก</h1></div>
      <div class="col-xs-5 "></div>  
    </div>
 
    <br>
-
-
-
    <div class="row">
     <div class="col-xs-6 col-md-4"></div>
     <div class="col-xs-6 col-md-4">
 
-      <g:form class="form-horizontal">
-
-        <div class="form-group">
-          <label for="inputitemid" class="col-sm-5 control-label">รหัสอุปกรณ์</label>
-          <div class="col-sm-7">
-            <g:textField name="title" class="form-control" id="inputitemid" placeholder=""/>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="inputamount" class="col-sm-5 control-label">ชื่ออุปกรณ์</label>
-          <div class="col-sm-7">
-            <g:textField name="category" class="form-control" id="inputamount" placeholder=""/>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="inputleast" class="col-sm-5 control-label">จำนวน</label>
-          <div class="col-sm-7">
-            <g:textField name="least"  class="form-control" id="inputleast" placeholder=""/>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="inputleast" class="col-sm-5 control-label">ขั้นต่ำ</label>
-          <div class="col-sm-7">
-            <g:textField name="amount"  class="form-control" id="inputleast" placeholder=""/>
-          </div>
-        </div>
-
-        
-
+      <form class="form-horizontal">
+        <g:hiddenField name="itemId" value="${item.id}"/>
+   
+      
 
       </div>
-      <div class="form-group">
-        <div class="col-sm-offset-6 col-sm-6">
-          <br>
-          <g:actionSubmit value="เพิ่ม" action="saveItem" class="btn btn-default"/>
-        </div>
-
-      </div> </div>
-
-
-      <div class="col-xs-6 col-md-4"></div>
+      
+    </div>
     </div>
 
 
+
+<table id="itemTable"  align="center" style="width:50%" class="table table-striped">
+    
+      <tbody>
+           
+            <tr>
+              <th>ชื่อ</th>   <td>${item.title} </td>
+            </tr>
+           
+            <tr>
+              <th>หมวดหมู่ </th>   <td>${item.category} </td>
+            </tr>
+            
+            <tr>
+              <th>จำนวนขั้นต่ำ</th><td>${item.least} </td>
+            </tr>
+
+            <tr>
+              <th>จำนวนที่มีอยู่</th>   <td> ${item.amount}</td>
+            </tr>
+            <tr>
+              <td><g:actionSubmit value="EDIT" action="editItem" params="[itemId:"${item.id}"]" class="btn btn-default"/> <button type="submit" class="btn btn-default">ลบ</button> <button type="submit" class="btn btn-default">ย้อนกลับ</button>  </td>
+            </tr>
+
+      </tbody>
+      </table>
+
+
+
+
+    <div class="col-xs-6 col-md-4"></div>
   </div>
-</g:form>
+
+
 </div>
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 </div>
 </body>
 </html>
