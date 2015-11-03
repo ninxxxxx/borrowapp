@@ -7,7 +7,7 @@ class User {
 	String lastName;
 	String tel;
 	String passcode;
-	String rfidCode
+	String rfidCode;
 	
     static constraints = {
     }
