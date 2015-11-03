@@ -116,19 +116,17 @@
               <th>รหัส RFID</th>   <td> ${user.rfidCode} </td>
             </tr>
             <tr>
-              <td><g:actionSubmit value="EDIT" action="editUser" params="[userId:"${user.id}"]" class="btn btn-default"/> <button type="submit" class="btn btn-default">ลบ</button> <button type="submit" class="btn btn-default">ย้อนกลับ</button>  </td>
+              <td><g:actionSubmit value="EDIT" action="editUser" params="[userId:"${user.id}"]" class="btn btn-default"/> <g:actionSubmit value="DELETE" action="deleteUser" params="[userId:"${user.id}"]" class="btn btn-default"/> <g:actionSubmit value="BACK" action="userMain" class="btn btn-default"/>  </td>
             </tr>
 
       </tbody>
       </table>
 
 
-
-
     <div class="col-xs-6 col-md-4"></div>
   </div>
 
-
+<g:actionSubmit value="add" action="addUser" class="btn btn-default"/>
 </div>
 
 
