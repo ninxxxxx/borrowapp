@@ -10,7 +10,7 @@
 </head>
 
 
-<body>
+<body controller="Item">
 	
 <div class="container">
 	<nav class="navbar navbar-default">
@@ -98,11 +98,17 @@
 			        <td><g:link action="itemDetails" params="[itemId:"${item.id}"]">${item.title}</g:link></td>
 			      </tr>
             </g:each>
-      
-			   
+            <tr><td> </td><td> </td></tr>
+            <tr><td> </td><td> </td></tr>
+            <tr><td><g:form controller="Item">
+    <g:actionSubmit value="เพิ่มอุปกรณ์" action="addItem" class="btn btn-default"/></td><td> </td></tr>
 
-			</tbody>
+      </tbody>
+
 			</table>
+</g:form>
+
+			
 
 
 	</div>

@@ -105,7 +105,7 @@
               <th>จำนวนที่มีอยู่</th>   <td> ${item.amount}</td>
             </tr>
             <tr>
-              <td><g:actionSubmit value="EDIT" action="editItem" params="[itemId:"${item.id}"]" class="btn btn-default"/> <button type="submit" class="btn btn-default">ลบ</button> <button type="submit" class="btn btn-default">ย้อนกลับ</button>  </td>
+              <td><g:actionSubmit value="EDIT" action="editItem" params="[itemId:"${item.id}"]" class="btn btn-default"/> <g:actionSubmit value="DELETE" action="deleteItem" params="[itemId:"${item.id}"]" class="btn btn-default"/> <g:actionSubmit value="BACK" action="itemMain" class="btn btn-default"/>  </td>
             </tr>
 
       </tbody>
