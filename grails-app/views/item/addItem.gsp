@@ -67,7 +67,7 @@
 
     <div class="row">
      <div class="col-xs-5 "></div>
-     <div class="col-xs-5 col-md-6"><h1>เพิ่มสมาชิก</h1></div>
+     <div class="col-xs-5 col-md-6"><h1>เพิ่มอุปกรณ์</h1></div>
      <div class="col-xs-5 "></div>  
    </div>
 
