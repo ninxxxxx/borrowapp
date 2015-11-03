@@ -10,7 +10,7 @@
 </head>
 
 
-<body>
+<body controller="User">
 	
 <div class="container">
 	<nav class="navbar navbar-default">
@@ -97,10 +97,17 @@
 
 			        <td><g:link action="userDetails" params="[userId:"${user.id}"]">${user.firstName}</g:link></td>
 			      </tr>
-            </g:each>
-      
-			   
 
+
+            </g:each>
+      		<tr><td>
+
+      			<g:form controller="User">
+    <g:actionSubmit value="เพิ่มสมาชิก" action="addUser" class="btn btn-default"/>
+</g:form>
+
+			</td></tr>   
+			
 			</tbody>
 			</table>
 
