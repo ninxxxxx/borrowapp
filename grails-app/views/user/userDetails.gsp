@@ -81,45 +81,40 @@
        <div class="form-group">
         <g:hiddenField name="userId" value="${user.id}" />
         <label for="inputitemid" class="col-sm-8 control-label">ชื่อผู้ใช้ (user name) :${user.username}       
-                <g:each in="${users}"> ${user.username}</g:each></label>
        </div>
 
       <div class="form-group">
         <label for="inputamount" class="col-sm-8 control-label">รหัสผ่าน (password) :  ${user.password}
-                <g:each in="${users}"> ${user.password}</g:each></label>
       </div>
 
       <div class="form-group">
         <label for="inputleast" class="col-sm-8 control-label">ชื่อ :  ${user.firstName}
-                <g:each in="${users}"> ${user.firstName}</g:each></label>
       </div>
 
       <div class="form-group">
         <label for="inputleast" class="col-sm-8 control-label">สกุล :  ${user.lastName}
-                 <g:each in="${users}"> ${user.lastName}</g:each></label>
       </div>
 
       <div class="form-group">
         <label for="inputleast" class="col-sm-8 control-label">เบอ์โทรศัทพ์ :  ${user.tel}
-                 <g:each in="${users}"> ${user.tel}</g:each></label>
       </div>
 
       <div class="form-group">
         <label for="inputleast" class="col-sm-8 control-label">รหัสบัตร (passcode) :  ${user.passcode}
-                 <g:each in="${users}"> ${user.passcode}</g:each></label>
       </div>
 
       <div class="form-group">
         <label for="inputleast" class="col-sm-8 control-label">รหัส RFID :   ${user.rfidCode}
-                <g:each in="${users}"> ${user.rfidcode}</g:each></label>
 
       </div>
 
 
     </div>
+  
     <div class="form-group">
       <div class="col-sm-offset-6 col-sm-6">
         <br>
+        <g:link class="btn btn-default" action="deleteUser" params="[userId:"${user.id}"]">DELETE</g:link>
         <g:actionSubmit value="edit" action="editUser" class="btn btn-default"/> <button type="submit" class="btn btn-default">ย้อนกลับ</button>  
       </div>
 
@@ -134,8 +129,7 @@
 
 
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+
 </div>
 </body>
 </html>

@@ -118,7 +118,8 @@ class UserController {
     }
 
     @Transactional
-    def saveUser(String firstName, String lastName, String username, String password, String tel, String passcode, String rfidCode){
+    def saveUser(){
+        // print param
         def u = new User(params)
         //def u = new User(username:username, password:password, firstName:firstName, lastName:lastName, tel:tel, passcode:passcode, rfidCode:rfidCode)
         u.save(flush: true)
@@ -126,10 +127,11 @@ class UserController {
         redirect(action:"userDetails", params:[userId:u.id])
     }
 
+    @Transactional
     def deleteUser(){
         //action : delete
         def user = User.get(params.userId)
-        question.delete()
+        user.delete()
         redirect(action:'userMain')
     }
 

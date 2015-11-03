@@ -126,7 +126,7 @@
         <div class="form-group">
           <label for="inputleast" class="col-sm-5 control-label">รหัส RFID</label>
           <div class="col-sm-7">
-            <g:textField name="rfidcode" class="form-control" id="inputleast" placeholder=""/>
+            <g:textField name="rfidCode" class="form-control" id="inputleast" placeholder=""/>
           </div>
         </div>
 

@@ -50,9 +50,9 @@
   </nav>
 
 <div class="row">
- <div class="col-xs-4 "></div>
-  <div class="col-xs-4 col-md-6"><h1>Edit User</h1></div>
- <div class="col-xs-4 "></div>  
+ <div class="col-xs-2 col-md-2"></div>
+  <div class="col-xs-8 col-md-8"><h1>Edit User</h1></div>
+ <div class="col-xs-2 col-md-2"></div>  
 </div>
 
 <br>
@@ -60,10 +60,7 @@
 
 
 <div class="row">
-  <div class="col-xs-6 col-md-4"></div>
-
-
-
+  <div class="col-xs-3 col-md-4"></div>
 
   <div class="col-xs-6 col-md-4">
 
@@ -74,92 +71,56 @@
   <div class="form-group">
     <g:hiddenField name="userId" value="${user.id}" />
     <div class="col-sm-7">
-<<<<<<< HEAD
-      User name : <g:textField name="username"  class="form-control" id="inputitemid" placeholder=""/>
-=======
-      User name : <g:textArea value="${user.username}" name="username"  class="form-control" id="inputitemid" rows="1" placeholder=""/>
->>>>>>> 711b9376fd8e3a9fa72f5b1f77cae4d3d32d713f
+      User name : <g:textField name="username" value="${user.username}" class="form-control" id="inputitemid" placeholder=""/>
     </div>
   </div>
 <br>
     <div class="form-group">
-     
     <div class="col-sm-7">
-<<<<<<< HEAD
-      password :<g:textField name="password"  class="form-control" id="inputitemname"  placeholder=""/>
-=======
-      password :<g:textArea value="${user.password}" name="password"  class="form-control" id="inputitemname" rows="1" placeholder=""/>
->>>>>>> 711b9376fd8e3a9fa72f5b1f77cae4d3d32d713f
+      password :<g:textField name="password"  value="${user.password}" class="form-control" id="inputitemname"  placeholder=""/>
     </div>
   </div>
 <br>
   <div class="form-group">
-    
     <div class="col-sm-7">
-<<<<<<< HEAD
-      firstName :<g:textField name="firstName"  class="form-control" id="inputamount"  placeholder=""/>
-=======
-      firstName :<g:textArea value="${user.firstName}" name="firstName"  class="form-control" id="inputamount" rows="1" placeholder=""/>
->>>>>>> 711b9376fd8e3a9fa72f5b1f77cae4d3d32d713f
-
+      firstName :<g:textField name="firstName" value="${user.firstName}" class="form-control" id="inputamount"  placeholder=""/>
     </div>
   </div>
   <div class="form-group">
-    
     <div class="col-sm-7">
-<<<<<<< HEAD
-      lastName :<g:textField name="lastName"  class="form-control" id="inputamount" placeholder=""/>
-=======
-      lastName :<g:textArea value="${user.lastName}" name="lastName"  class="form-control" id="inputamount" rows="1" placeholder=""/>
->>>>>>> 711b9376fd8e3a9fa72f5b1f77cae4d3d32d713f
-
+      lastName :<g:textField name="lastName" value="${user.lastName}" class="form-control" id="inputamount" placeholder=""/>
     </div>
   </div>
 <div class="form-group">
-    
     <div class="col-sm-7">
-<<<<<<< HEAD
-      Tel. :<g:textField name="tel"  class="form-control" id="inputamount"  placeholder=""/>
-=======
-      Tel. :<g:textArea value="${user.tel}" name="tel"  class="form-control" id="inputamount" rows="1" placeholder=""/>
->>>>>>> 711b9376fd8e3a9fa72f5b1f77cae4d3d32d713f
-
+      Tel. :<g:textField name="tel" value="${user.tel}" class="form-control" id="inputamount"  placeholder=""/>
     </div>
   </div>
 <div class="form-group">
-    
     <div class="col-sm-7">
-<<<<<<< HEAD
-      passcode :<g:textField name="passcode"  class="form-control" id="inputamount"  placeholder=""/>
-=======
-      passcode :<g:textArea value="${user.passcode}"  name="passcode"  class="form-control" id="inputamount" rows="1" placeholder=""/>
->>>>>>> 711b9376fd8e3a9fa72f5b1f77cae4d3d32d713f
-
+      passcode :<g:textField name="passcode" value="${user.passcode}" class="form-control" id="inputamount"  placeholder=""/>
     </div>
-  </div>  
-
-  
-
+  </div> 
+<div class="form-group">
+    <div class="col-sm-7">
+      passcode :<g:textField name="rfidCode" value="${user.rfidCode}" class="form-control" id="inputamount"  placeholder=""/>
+    </div>
+  </div>   
   </div>
   <div class="form-group">
     <div class="col-sm-offset-5 col-sm-3">
-
       <center><g:actionSubmit value="Submit" action="updateUser" class="btn btn-primary"/><center>
-      
     </div>
-
-  </div> </div>
-
-
-  <div class="col-xs-6 col-md-4"></div>
+  </div> 
+</div>
+  <div class="col-xs-3 col-md-4"></div>
 </div>
 
 </div>
 </g:form>
 
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+
 </div>
 </body>
 </html>
