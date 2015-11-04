@@ -30,37 +30,31 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
 							<li class="active"><a href="admin.html">Home <span class="sr-only">(current)</span></a></li>
-							<li><a href="#">การแจ้งเตือน</a></li>
-							<li class="dropdown">
-				          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">อุปกรณ์ <span class="caret"></span></a>
-				          		<ul class="dropdown-menu">
-				            		<li><a href="add.html">เพิ่ม-ลบ อุปกรณ์</a></li>
-						            <li><a href="check.html">รายละเอียดอุปกรณ์</a></li>
-				          		</ul>
-				        	</li>
-				        	<li class="dropdown">
-				          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">สมาชิก <span class="caret"></span></a>
-				          		<ul class="dropdown-menu">
-				            		<li><a href="add.html">เพิ่มสมาชิก</a></li>
-						            <li><a href="detailuser.html">รายชื่อสมาชิก</a></li>
-				          		</ul>
-				        	</li>
-							<li><a href="history.html">ประวัติ</a></li>
+							<li><g:link  action="remind" >แจ้งเตือน</g:link></li>
+							<li><g:link  action="history" >ประวัติ</g:link></li>
+				        	<li><g:link controller="Item" action="itemMain" >อุปกรณ์</g:link></li>
+							<li><g:link action="userMain" >สมาชิก</g:link></li>
+							
 						</ul>
-
+						<ul class="nav navbar-nav ">
+		        			<g:actionSubmit value="Sign out" action="signOut" class="btn btn-default navbar-btn"/>
+		      			</ul>
+						
+						<ul class="nav navbar-nav navbar-right">
+						
+		        			<form method="get" action="http://www.google.com/search">
+									<input type="text"   name="q" size="20" style="color:#808080;"
+									maxlength="100" value="Google site search"
+									onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" 
+									onblur="if(this.value=='')this.value=this.defaultValue; "/>
+									<input type="submit" value="Go!" class="btn btn-default navbar-btn" />
+									<input type="hidden" name="sitesearch"  value="" />
+							</form>
+						</ul>
+		      	
 						
 
-	      		<form class="navbar-form navbar-right" role="search">
-	        		<div class="form-group">
-	          			<input type="text" class="form-control" placeholder="Search">
-	        		</div>
-	        		<button type="submit" class="btn btn-default">search</button>
-	      		</form>
-
-		      	<ul class="nav navbar-nav navbar-right">
-		        	<button type="button" class="btn btn-default navbar-btn">Sign out</button>
-
-		      	</ul>
+		      			
 
 	    	</div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -78,11 +72,13 @@
 					</div>
 				<button type="submit" class="btn btn-default">search</button>
 		</div>
-			
+
 				
 	</form>
 
 	
+
+
    		<table id="itemTable"  align="center" style="width:50%" class="table table-striped">
 	    	<thead>
 			      <tr>
@@ -96,6 +92,7 @@
 			        <td>${user.id}</td>
 
 			        <td><g:link action="userDetails" params="[userId:"${user.id}"]">${user.firstName}</g:link></td>
+			        <td><g:link action="deleteUser" params="[userId:"${user.id}"]">DELETE</g:link></td>
 			      </tr>
 
 
@@ -103,8 +100,10 @@
       		<tr><td>
 
       			<g:form controller="User">
-    <g:actionSubmit value="เพิ่มสมาชิก" action="addUser" class="btn btn-default"/>
-</g:form>
+    <g:actionSubmit value="เพิ่มสมาชิก" action="addUser" class="btn btn-default"/></g:form>
+    <td></td>
+    <td></td>
+
 
 			</td></tr>   
 			
