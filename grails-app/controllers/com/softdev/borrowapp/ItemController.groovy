@@ -105,7 +105,7 @@ class ItemController {
 
     def itemMain(){//
         // : show user's list
-        [items: item.list(params)]
+        [items: Item.list(params)]
 
     }
 
@@ -113,20 +113,26 @@ class ItemController {
         //from usermain : add user
     }
 
-    @Transactional
-    def saveItem(){
-        // print param
-        def item = new Item(params)
-        //def u = new item(itemname:itemname, password:password, firstName:firstName, lastName:lastName, tel:tel, passcode:passcode, rfidCode:rfidCode)
-        u.save(flush: true)
-        // print u.id
-        redirect(action:"itemDetails", params:[itemId:u.id])
+    def itemDetails(){
+        [item: Item.get(params.itemId)]
     }
 
+    @Transactional
+    def saveItem(){
+        // print params.title
+        // print params.category
+        // print params.least
+        // print params.amount
+        def item = new Item(params)
+        item.save()
+        redirect(action:"itemDetails", params:[itemId:item.id])
+    }
+
+    @Transactional
     def deleteItem(){
         //action : delete
         def item = Item.get(params.itemId)
-        question.delete()
+        item.delete()
         redirect(action:'itemMain')
     }
 
@@ -140,11 +146,11 @@ class ItemController {
         //action : update item's details
         def item = Item.get(params.itemId)
         // print params.username
-        item.username = params.title
-        item.password = params.category
-        item.firstName = params.least
-        item.lastName = params.amount
+        item.title = params.title
+        item.category = params.category
+        item.least = params.int("least")
+        item.amount = params.int("amount")
         item.save()
         redirect(action:"itemDetails", params:[itemId: item.id])
-    }
+    }   
 }

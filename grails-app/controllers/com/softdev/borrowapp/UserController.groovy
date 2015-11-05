@@ -119,11 +119,8 @@ class UserController {
 
     @Transactional
     def saveUser(){
-        // print param
         def u = new User(params)
-        //def u = new User(username:username, password:password, firstName:firstName, lastName:lastName, tel:tel, passcode:passcode, rfidCode:rfidCode)
         u.save(flush: true)
-        // print u.id
         redirect(action:"userDetails", params:[userId:u.id])
     }
 
