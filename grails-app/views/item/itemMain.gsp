@@ -56,7 +56,7 @@
       <tr><td><g:form controller="Item">
     <g:actionSubmit value="เพิ่มอุปกรณ์" action="addItem" class="btn btn-default"/></td><td> </td></tr>
 		</table>
-<	/g:form>
+	</g:form>
 
 			
 
