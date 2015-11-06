@@ -50,6 +50,7 @@
 			        <td>${item.category}</td>
 			        <td>${item.least}</td>
 			        <td>${item.amount}</td>
+			        <td><g:link action="itemDetails" params="[itemId:"${item.id}"]">${item.title}</g:link></td>
 			      </tr>
             </g:each>
      		</tbody>
