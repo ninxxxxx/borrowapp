@@ -2,6 +2,8 @@ import com.softdev.borrowapp.*
 
 class BootStrap {
 
+    def springSecurityService
+    
     def init = { servletContext ->
 
     	def user1 = new User(firstName:"pang", lastName:"DDk", username:"pangpang", password:"123456", tel:"0850680467", passcode:"5465", rfidCode:"98798784654")
