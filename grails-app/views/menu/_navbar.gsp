@@ -27,14 +27,22 @@
 						
 						<ul class="nav navbar-nav navbar-right">
 						
-		        			<form method="get" action="http://www.google.com/search">
+		        			%{-- <form method="get" action="http://www.google.com/search">
 									<input type="text"   name="q" size="20" style="color:#808080;"
 									maxlength="100" value="Google site search"
 									onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" 
 									onblur="if(this.value=='')this.value=this.defaultValue; "/>
 									<input type="submit" value="Go!" class="btn btn-default navbar-btn" />
 									<input type="hidden" name="sitesearch"  value="" />
-							</form>
+							</form> --}%
+							    <sec:ifLoggedIn>
+    							  <li>
+    							    <a href="${createLink(uri: '/j_spring_security_logout')}" >  
+    							      Logout (<sec:loggedInUserInfo field="username" />)
+    							    </a>
+    							  </li>
+    							</sec:ifLoggedIn>
+
 						</ul>
 	    	</div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
