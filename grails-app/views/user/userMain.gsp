@@ -26,11 +26,8 @@
 					</div>
 				<button type="submit" class="btn btn-default">search</button>
 		</div>
-
-				
+		
 	</form>
-
-	
 
 
    		<table id="itemTable"  align="center" style="width:50%" class="table table-striped">

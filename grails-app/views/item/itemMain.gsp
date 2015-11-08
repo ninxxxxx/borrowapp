@@ -19,18 +19,6 @@
 	
 	
 
-	<form class="form-horizontal form-center" role="search">
-		<div class="form-group">
-				<label for="search" class="col-sm-4 control-label">ค้นหา</label>
-					<div class="col-sm-4">
-						<input type="text" class="form-control" placeholder="ชื่อ">
-					</div>
-				<button type="submit" class="btn btn-default">search</button>
-		</div>
-			
-				
-	</form>
-
 	
    		<table id="itemTable"  align="center" style="width:50%" class="table table-striped">
 	    	<thead>
@@ -50,7 +38,6 @@
 			        <td>${item.category}</td>
 			        <td>${item.least}</td>
 			        <td>${item.amount}</td>
-			        <td><g:link action="itemDetails" params="[itemId:"${item.id}"]">${item.title}</g:link></td>
 			      </tr>
             </g:each>
      		</tbody>
