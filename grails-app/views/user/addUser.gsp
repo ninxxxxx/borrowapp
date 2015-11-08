@@ -3,17 +3,14 @@
 <html>
 <head>
   <meta charset = "utf-8" />
+  <meta name="layout" content="main">
   <title></title>
-    <asset:stylesheet src="application.css"/>
-    <asset:javascript src="application.js"/>
 
 </div>
 
 </head>
 <body controller="User">
   <div class="container">
-
-<g:render template="/menu/navbar"/>
 
     <div class="row">
      <div class="col-xs-5 "></div>

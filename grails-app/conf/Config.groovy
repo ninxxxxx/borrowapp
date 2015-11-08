@@ -127,7 +127,7 @@ grails.plugin.springsecurity.rejectIfNoRule = true
 grails.plugin.springsecurity.securityConfigType = "InterceptUrlMap"
 
 grails.plugin.springsecurity.interceptUrlMap = [
-    '/':                              ['ROLE_ADMIN'],
+    '/':                              ['ROLE_ADMIN', 'ROLE_USER'],
     '/index':                         ['ROLE_ADMIN'],
     '/index.gsp':                     ['ROLE_ADMIN'],
     '/assets/**':                     ['permitAll'],
@@ -140,6 +140,15 @@ grails.plugin.springsecurity.interceptUrlMap = [
     '/login/**':                      ['permitAll'],
     '/logout/**':                     ['permitAll'],
     '/api/**':                        ['ROLE_USER','ROLE_ADMIN'],
-    '/**':                            ['ROLE_ADMIN'],
+    // '/**':                            ['ROLE_ADMIN', 'ROLE_USER'],
+    '/user/**':                       ['ROLE_ADMIN'],
+    '/item/**':                       ['ROLE_ADMIN'],
+    '/adduser/**':                    ['ROLE_ADMIN'],
+    '/additem/**':                    ['ROLE_ADMIN'],
+    '/picking/**':                    ['ROLE_USER', 'ROLE_ADMIN'],
+    '/borrowing/**':                  ['ROLE_USER', 'ROLE_ADMIN'],
+    '/noti':                          ['ROLE_ADMIN'],
+    '/history':                       ['ROLE_USER', 'ROLE_ADMIN'],
+
 ]
 

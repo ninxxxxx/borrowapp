@@ -33,6 +33,7 @@ class BootStrap {
         i1.save()
         i2.save()
         i3.save()
+        
     }
     def destroy = {
     }

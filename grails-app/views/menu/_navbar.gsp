@@ -15,8 +15,8 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
 							<li class="active"><a href="admin.html">Home <span class="sr-only">(current)</span></a></li>
-							<li><g:link  action="remind" >แจ้งเตือน</g:link></li>
-							<li><g:link  action="history" >ประวัติ</g:link></li>
+							<li><g:link  url="./noti" >แจ้งเตือน</g:link></li>
+							<li><g:link  url="./history" >ประวัติ</g:link></li>
 				        	<li><g:link controller="Item" action="itemMain" >อุปกรณ์</g:link></li>
 							<li><g:link controller="User" action="userMain" >สมาชิก</g:link></li>
 							
