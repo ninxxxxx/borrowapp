@@ -1,10 +1,8 @@
 <html>
 <head>
-
+	<meta name="layout" content="main">
 	<meta charset = "utf-8" />
-    <asset:stylesheet src="application.css"/>
-    <asset:javascript src="application.js"/>
-
+    
 	
 	<title></title>
 </head>
@@ -13,8 +11,6 @@
 <body controller="Item">
 	
 <div class="container">
-	<g:render template="/menu/navbar"/>
-
 	<h1 class="text-center page-header">ItemMain</h1>
 	
 	

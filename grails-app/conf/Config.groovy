@@ -13,6 +13,8 @@
 
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
 
+
+
 // The ACCEPT header will not be used for content negotiation for user agents containing the following strings (defaults to the 4 major rendering engines)
 grails.mime.disable.accept.header.userAgents = ['Gecko', 'WebKit', 'Presto', 'Trident']
 grails.mime.types = [ // the first one is the default format
@@ -115,3 +117,38 @@ log4j.main = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.softdev.borrowapp.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.softdev.borrowapp.UserRole'
+grails.plugin.springsecurity.authority.className = 'com.softdev.borrowapp.Role'
+grails.plugin.springsecurity.rejectIfNoRule = true
+grails.plugin.springsecurity.securityConfigType = "InterceptUrlMap"
+
+grails.plugin.springsecurity.interceptUrlMap = [
+    '/':                              ['ROLE_ADMIN', 'ROLE_USER'],
+    '/index':                         ['ROLE_ADMIN'],
+    '/index.gsp':                     ['ROLE_ADMIN'],
+    '/assets/**':                     ['permitAll'],
+    '/**/js/**':                      ['permitAll'],
+    '/**/css/**':                     ['permitAll'],
+    '/dbconsole/**':                  ['ROLE_ADMIN'],
+    '/console/**':                    ['ROLE_ADMIN'],
+    '/**/images/**':                  ['permitAll'],
+    '/**/favicon.ico':                ['permitAll'],
+    '/login/**':                      ['permitAll'],
+    '/logout/**':                     ['permitAll'],
+    '/api/**':                        ['ROLE_USER','ROLE_ADMIN'],
+    // '/**':                            ['ROLE_ADMIN', 'ROLE_USER'],
+    '/user/**':                       ['ROLE_ADMIN'],
+    '/item/**':                       ['ROLE_ADMIN'],
+    '/adduser/**':                    ['ROLE_ADMIN'],
+    '/additem/**':                    ['ROLE_ADMIN'],
+    '/picking/**':                    ['ROLE_USER', 'ROLE_ADMIN'],
+    '/borrowing/**':                  ['ROLE_USER', 'ROLE_ADMIN'],
+    '/noti':                          ['ROLE_ADMIN'],
+    '/history':                       ['ROLE_USER', 'ROLE_ADMIN'],
+
+]
+

@@ -1,15 +1,14 @@
 <html>
 <head>
+  <meta name="layout" content="main">
   <meta charset = "utf-8" />
   <title></title>
-  <asset:stylesheet src="application.css"/>
-    <asset:javascript src="application.js"/>
+ 
 </head>
 <body controller="User">
 <div class="container">
 
 
-<g:render template="/menu/navbar"/>
 
 <div class="row">
  <div class="col-xs-2 col-md-2"></div>

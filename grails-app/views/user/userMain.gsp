@@ -1,9 +1,8 @@
 <html>
 <head>
-
+<meta name="layout" content="main">
 	<meta charset = "utf-8" />
-    <asset:stylesheet src="application.css"/>
-    <asset:javascript src="application.js"/>
+   
 
 	
 	<title></title>
@@ -13,7 +12,6 @@
 <body controller="User">
 	
 <div class="container">
-<g:render template="/menu/navbar"/>
 	<h1 class="text-center page-header">UserMain</h1>
 	
 	
@@ -63,12 +61,6 @@
 
 
 	</div>
-
-
-
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
 	
 </div>
 </body>
