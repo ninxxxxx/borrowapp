@@ -17,7 +17,12 @@
 		<g:layoutHead/>
 	</head>
 	<body>
-		<g:render template="/menu/navbar"/>
+		<sec:ifNotLoggedIn>
+
+		</sec:ifNotLoggedIn>
+		<sec:ifLoggedIn>
+			<g:render template="/menu/navbar"/>
+		</sec:ifLoggedIn>
 		<g:layoutBody/>
 	</body>
 </html>

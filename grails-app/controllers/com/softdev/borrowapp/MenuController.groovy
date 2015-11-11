@@ -8,6 +8,10 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class MenuController{
 
+	def home(){
+
+	}
+	
 	def noti(){
 		// render "NOTIFICATION"
 	}
