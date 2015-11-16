@@ -18,6 +18,8 @@ class User implements Serializable {
 	String tel;
 	String passcode;
 	String rfidCode;
+	Picking pick;
+	Borrowing borrow;
 
 	User(String username, String password) {
 		this()
@@ -68,6 +70,8 @@ class User implements Serializable {
 		tel nullable:true
 		passcode nullable:true
 		rfidCode nullable:true
+		pick nullable:true
+		borrow nullable:true
 	}
 
 	static mapping = {
