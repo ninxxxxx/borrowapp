@@ -12,14 +12,22 @@ class BootStrap {
         def userRole = new Role(authority: 'ROLE_USER').save(flush: true)
 
         def admin = new User(username: 'admin', password: '1234')
-    	def user1 = new User(firstName:"pang", lastName:"DDk", username:"pangpang", password:"123456", tel:"0850680467", passcode:"5465", rfidCode:"98798784654")
-    	def user2 = new User(firstName:"anchan", lastName:"si", username:"chunchun", password:"987654", tel:"0850680545", passcode:"3333", rfidCode:"9987545654")
-    	def user3 = new User(firstName:"pungpond", lastName:"dekdek", username:"dekdek", password:"987987", tel:"08587840545", passcode:"3543", rfidCode:"99898795654")
+        def user1 = new User(firstName:"pang", lastName:"DDk", username:"pangpang", password:"123456", tel:"0850680467", passcode:"5465", rfidCode:"98798784654")
+        def user2 = new User(firstName:"anchan", lastName:"si", username:"chunchun", password:"987654", tel:"0850680545", passcode:"3333", rfidCode:"9987545654")
+        def user3 = new User(firstName:"pungpond", lastName:"dekdek", username:"dekdek", password:"987987", tel:"08587840545", passcode:"3543", rfidCode:"99898795654")
 
         def i1 = new Item(title:"ปากกา ตราม้า", category:"เครื่องเขียน", least:10, amount:100)
         def i2 = new Item(title:"กระดาษA4", category:"กระดาษ", least:10, amount:1000)
         def i3 = new Item(title:"ชอร์ค(กล่อง)", category:"เครื่องเขียน", least:2, amount:25)
 
+        def p1 = new Picking(user:'ooi',item:'pen',isAccept:true)
+        def p2 = new Picking(user:'noi',item:'rubber',isAccept:true)
+        def p3 = new Picking(user:'soi',item:'paper',isAccept:true)
+        
+        def b1 = new Borrowing(item:'pencil',user:'yok')
+        def b2 = new Borrowing(item:'pen',user:'cream')
+        def b3 = new Borrowing(item:'maitu',user:'natt')
+        
         admin.save(failOnError: true)
         user1.save(failOnError: true)
         user2.save(failOnError: true)
@@ -34,6 +42,15 @@ class BootStrap {
         i2.save()
         i3.save()
         
+
+        p1.save()
+        p2.save()
+        p3.save()
+
+
+        b1.save()
+        b2.save()
+        b3.save()
     }
     def destroy = {
     }
