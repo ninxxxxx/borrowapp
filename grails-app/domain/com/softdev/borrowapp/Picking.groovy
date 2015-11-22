@@ -2,12 +2,21 @@ package com.softdev.borrowapp
 
 class Picking {
 
-	User user 
-	Item item 
-	Date pickDate
-	Boolean isAccept 
+	User user
+	static hasMany = [items: Item] 
+	Date startDate
+	Boolean isAccept
+	Boolean isBorrow
+	Date returnDate 
+	Boolean isReturn
+
     static constraints = {
-    pickDate nullable:true,
-    
+    	startDate nullable:true
+    	isBorrow nullable:true
+    	returnDate nullable:true
+    	isReturn nullable:true
+    	isAccept nullable:true
     }
 }
+
+	

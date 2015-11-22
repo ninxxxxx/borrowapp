@@ -70,7 +70,7 @@ class User implements Serializable {
 		tel nullable:true
 		passcode nullable:true
 		rfidCode nullable:true
-		pick nullable:true
+		pick nullable:true			
 		borrow nullable:true
 	}
 
