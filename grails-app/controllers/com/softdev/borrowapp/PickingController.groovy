@@ -106,14 +106,4 @@ class PickingController {
         // render "PICKING_MAIN"
     }
 
-    def savePick(){
-        def pick = new Picking(params)
-        pick.save()
-        redirect uri: "/"
-    }
-
-    def test(){
-        redirect uri: "/"
-    }
-
 }

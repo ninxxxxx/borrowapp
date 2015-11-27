@@ -22,15 +22,17 @@ class BootStrap {
         def user8 = new User(firstName:"arnon", lastName:"arnon", username:"arnonarnon", password:"981654", tel:"0820680545", passcode:"3033", rfidCode:"1957545654")
 
 
-        def i1 = new Item(title:"ปากกา ตราม้า", category:"เครื่องเขียน", least:10, amount:100)
-        def i2 = new Item(title:"กระดาษA4", category:"กระดาษ", least:10, amount:1000)
-        def i3 = new Item(title:"ชอร์ค(กล่อง)", category:"เครื่องเขียน", least:2, amount:25)
-        def i4 = new Item(title:"ปากกาหมึกซึม", category:"เครื่องเขียน", least:8, amount:25)
-        def i5 = new Item(title:"ปากกาลูกลื่น", category:"เครื่องเขียน", least:8, amount:24)
-        def i6 = new Item(title:"แปรงลบกระดาน", category:"เครื่องเขียน", least:2, amount:15)
-        def i7 = new Item(title:"ถุงขยะ", category:"เบ็ดเตล็ด", least:8, amount:30)
-        def i8 = new Item(title:"ที่โกย", category:"เบ็ดเตล็ด", least:2, amount:8)
-        def i9 = new Item(title:"ถุงมือยาง", category:"เบ็ดเตล็ด", least:8, amount:30)
+        def i1 = new Item(title:"ปากกา ตราม้า", category:"เครื่องเขียน", least:10, amount:100, canBorrow:false)
+        def i2 = new Item(title:"กระดาษA4", category:"กระดาษ", least:10, amount:1000, canBorrow:false)
+        def i3 = new Item(title:"ชอร์ค(กล่อง)", category:"เครื่องเขียน", least:2, amount:25, canBorrow:false)
+        def i4 = new Item(title:"ปากกาหมึกซึม", category:"เครื่องเขียน", least:8, amount:25, canBorrow:false)
+        def i5 = new Item(title:"ปากกาลูกลื่น", category:"เครื่องเขียน", least:8, amount:24, canBorrow:false)
+        def i6 = new Item(title:"แปรงลบกระดาน", category:"เครื่องเขียน", least:2, amount:15, canBorrow:false)
+        def i7 = new Item(title:"ถุงขยะ", category:"เบ็ดเตล็ด", least:8, amount:30, canBorrow:false)
+        def i8 = new Item(title:"ที่โกย", category:"เบ็ดเตล็ด", least:2, amount:8, canBorrow:true)
+        def i9 = new Item(title:"ถุงมือยาง", category:"เบ็ดเตล็ด", least:8, amount:30, canBorrow:false)
+        def i10 = new Item(title:"จอบ", category:"เบ็ดเตล็ด", least:2, amount:8, canBorrow:true)
+        def i11 = new Item(title:"แปรงสี", category:"เบ็ดเตล็ด", least:2, amount:10, canBorrow:true)
         
         
         admin.save(failOnError: true)
@@ -64,11 +66,11 @@ class BootStrap {
         i8.save()
         i9.save()
 
-        def p1 = new Picking(user:user4,item:i1,isAccept:true).save()
-        def p2 = new Picking(user:user2,item:i2,isAccept:true).save()
-        def p3 = new Picking(user:user3,item:i3,isAccept:true).save()
-        def p4 = new Picking(user:user5,item:i4,isAccept:true).save()
-        def p5 = new Picking(user:user6,item:i3,isAccept:true).save()
+        def p1 = new Picking(user:user4, isAccept:true, isBorrow:false, items:[i1, i2]).save()
+        def p2 = new Picking(user:user2, isAccept:true, isBorrow:false, items:[i3, i4]).save()
+        def p3 = new Picking(user:user3, isAccept:true, isBorrow:false, items:[i5, i6]).save()
+        def p4 = new Picking(user:user5, isAccept:true, isBorrow:true, items:[i8, i10]).save()
+        def p5 = new Picking(user:user6, isAccept:true, isBorrow:true, items:[i9]).save()
         
 
         def b1 = new Borrowing(item:i5,user:user7).save()

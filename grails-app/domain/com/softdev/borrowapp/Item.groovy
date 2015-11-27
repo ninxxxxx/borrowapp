@@ -6,7 +6,7 @@ class Item {
 	String category;
 	int least;
 	int amount;
-	
+	Boolean canBorrow
     static constraints = {
     }
 }
