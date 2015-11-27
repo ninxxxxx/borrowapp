@@ -1,7 +1,6 @@
 package com.softdev.borrowapp
 
 
-
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -105,6 +104,52 @@ class PickingController {
     def pickingMain(){
         // render "PICKING_MAIN"
     }
+    
+    def addPicking(){
 
+    }
 
+    def pickingList(){
+        def data = [:]
+        data.pick = Picking.list()
+      //  data.psequence = params.qsequence
+      render(template: 'addPick')
+  }
+
+  def s(){
+
+        def a = params.select.item
+        def picks = []
+
+        a.each{
+            def q = new Pick(item:Item.get(it), amount: 0).save(flush:true)
+            picks.add(q)
+        }
+        
+        redirect action:"savePick", params:[pick:picks]
+  }
+  
+  def savePick(){
+        //[picks:params.picks]
+        //println params.select 
+        // print params.select.item
+        //Item.get(params.select.item)
+        //def am = params.a
+
+        //println a
+        //println a[0]
+
+       // def test = Item.get(a)
+       // println test
+
+        //println b
+        //println b[0]
+        
+        
+    }
+    
+    def pickingResult(){
+
+    }
+    
 }

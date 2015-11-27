@@ -6,6 +6,7 @@ class Item {
 	String category;
 	int least;
 	int amount;
+
 	
     static constraints = {
     }
