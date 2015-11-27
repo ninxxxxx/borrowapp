@@ -149,6 +149,7 @@ grails.plugin.springsecurity.interceptUrlMap = [
     '/borrowing/**':                  ['ROLE_USER', 'ROLE_ADMIN'],
     '/noti':                          ['ROLE_ADMIN'],
     '/history':                       ['ROLE_USER', 'ROLE_ADMIN'],
+    '/menu/**':                       ['ROLE_USER', 'ROLE_ADMIN'],
 
 ]
 

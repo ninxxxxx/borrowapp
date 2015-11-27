@@ -5,6 +5,6 @@
 		<title>Welcome to BorrowApp</title>
 	</head>
 	<body>
-		<g:render template="/menu/home"/>
+		INDEX	
 	</body>
 </html>

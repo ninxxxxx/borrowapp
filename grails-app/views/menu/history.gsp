@@ -6,5 +6,6 @@
 </head>
 <body>
 HISTORY
+<g:link controller="menu" action="home">sss</g:link>
 </body>
 </html>

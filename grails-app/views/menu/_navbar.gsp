@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default">
 	  	<div class="container-fluid">
 	    	<!-- Brand and toggle get grouped for better mobile display -->
 	    	<div class="navbar-header">
@@ -13,19 +13,26 @@
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="admin.html">Home <span class="sr-only">(current)</span></a></li>
-							<li><g:link  url="./noti" >แจ้งเตือน</g:link></li>
-							<li><g:link  url="./history" >ประวัติ</g:link></li>
-				        	<li><g:link controller="Item" action="itemMain" >อุปกรณ์</g:link></li>
-							<li><g:link controller="User" action="userMain" >สมาชิก</g:link></li>
-							
-						</ul>
-						%{-- <ul class="nav navbar-nav ">
-		        			<g:actionSubmit value="Sign out" action="signOut" class="btn btn-default navbar-btn"/>
-		      			</ul> --}%
-						
-						<ul class="nav navbar-nav navbar-right">
+						<sec:ifAllGranted roles="ROLE_ADMIN">
+							<ul class="nav navbar-nav">
+								<li><g:link  url="./" >หน้าหลัก</g:link></li>
+								<li><g:link  controller="Menu" action="noti" >แจ้งเตือน</g:link></li>
+								<li><g:link  controller="Menu" action="history" >ประวัติ</g:link></li>
+				    	    	<li><g:link controller="Item" action="itemMain" >อุปกรณ์</g:link></li>
+								<li><g:link controller="User" action="userMain" >สมาชิก</g:link></li>
+								
+							</ul>
+						</sec:ifAllGranted>
+						<sec:ifAllGranted roles="ROLE_USER">
+							<ul class="nav navbar-nav">
+								<li><g:link  url="./" >หน้าหลัก</g:link></li>
+								<li><g:link  controller="Picking" action="pickingMain" >การเบิก</g:link></li>
+				    	    	<li><g:link controller="Borrowing" action="borrowingMain" >การยืม</g:link></li>
+								<li><g:link  controller="Menu" action="history" >ประวัติ</g:link></li>
+								
+							</ul>
+						</sec:ifAllGranted>
+							<ul class="nav navbar-nav navbar-right">
 						
 		        			%{-- <form method="get" action="http://www.google.com/search">
 									<input type="text"   name="q" size="20" style="color:#808080;"
