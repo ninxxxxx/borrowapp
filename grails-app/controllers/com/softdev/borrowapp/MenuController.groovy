@@ -1,3 +1,4 @@
+
 package com.softdev.borrowapp
 
 
@@ -16,11 +17,16 @@ class MenuController{
 			eq("isBorrow", true)
 		}
 		def items = Item.createCriteria().list{
-			le("amount", least)
+			leProperty("amount", "least")
 		}
 		// redirect action:"noti", params:[x:items]
 		print items
+		[items: items]
 		// render "NOTIFICATION"
+	}
+
+	def test(){
+		print params.myDate
 	}
 
 	def history(){
